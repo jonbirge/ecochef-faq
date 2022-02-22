@@ -4,10 +4,6 @@ Click this button to deploy the app to the DigitalOcean App Platform. If you are
 
 [![Deploy to DigitalOcean](https://www.deploytodo.com/do-btn-blue.svg)](https://cloud.digitalocean.com/apps/new?repo=https://github.com/jonbirge/ecochef-faq/tree/main)
 
-Using this button disables the ability to automatically re-deploy your app when pushing to a branch or tag in your repository as you are using this repo directly.
-
-After forking the repo, you should now be viewing this README in your own GitHub org (e.g. `https://github.com/<your-org>/sample-html`). To deploy the new repo, visit https://cloud.digitalocean.com/apps and click **Create App**. Then, click **GitHub**, select the repository you created and select the `main` branch. App Platform will inspect the code, automatically detect the kind of component to create, and use the correct buildpack to create and deploy a container.
-
 After clicking the **Deploy to DigitalOcean** button or completing the instructions above to fork the repo, follow these steps:
 
 1. Configure the app such as specifying HTTP routes, environment variables or adding a database.
