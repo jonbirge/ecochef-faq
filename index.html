@@ -1,133 +1,214 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>#000000</title>
-    <link type="image/x-icon" rel="shortcut icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAHklEQVQ4T2NkYGD4z0ABYBw1gGE0DBhGw4BhWIQBAE5OEAELnjVHAAAAAElFTkSuQmCC">
-    <style>
-        :root {
-            --color: #000000;
-            --color-transparent: #00000022;
-        }
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+ /* Style Definitions */
+ p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:22.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpFirst, li.MsoTitleCxSpFirst, div.MsoTitleCxSpFirst
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:22.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpMiddle, li.MsoTitleCxSpMiddle, div.MsoTitleCxSpMiddle
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:22.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoTitleCxSpLast, li.MsoTitleCxSpLast, div.MsoTitleCxSpLast
+	{mso-style-link:"Title Char";
+	margin:0in;
+	font-size:22.0pt;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	font-size:14.0pt;
+	font-family:"Calibri",sans-serif;}
+span.TitleChar
+	{mso-style-name:"Title Char";
+	mso-style-link:Title;
+	font-family:"Calibri Light",sans-serif;
+	letter-spacing:-.5pt;}
+.MsoChpDefault
+	{font-family:"Calibri",sans-serif;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
 
-        ::selection {
-            background: var(--color-transparent);
-        }
-
-        html,
-        body {
-            background: var(--color);
-            height: 100%;
-            margin: 0;
-        }
-
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-        }
-
-        #color {
-            background: white;
-            color: var(--color);
-            font-size: 2.5rem;
-            font-weight: 300;
-            padding: 2.25rem 3rem;
-            font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-            cursor: text;
-        }
-    </style>
 </head>
 
-<body>
-    <p id="color">#000000</p>
-    <script>
-        function randomInt(min, max) {
-            return Math.floor(Math.random() * (max - min + 1) + min);
-        }
+<body lang=EN-US style='word-wrap:break-word'>
 
-        function hslToHex(h, s, l) {
-            h /= 360;
-            s /= 100;
-            l /= 100;
-            var r = void 0,
-                g = void 0,
-                b = void 0;
-            if (s === 0) {
-                r = g = b = l; // achromatic
-            } else {
-                var hue2rgb = function hue2rgb(p, q, t) {
-                    if (t < 0) t += 1;
-                    if (t > 1) t -= 1;
-                    if (t < 1 / 6) return p + (q - p) * 6 * t;
-                    if (t < 1 / 2) return q;
-                    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
-                    return p;
-                };
-                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
-                var p = 2 * l - q;
-                r = hue2rgb(p, q, h + 1 / 3);
-                g = hue2rgb(p, q, h);
-                b = hue2rgb(p, q, h - 1 / 3);
-            }
-            var toHex = function toHex(x) {
-                var hex = Math.round(x * 255).toString(16);
-                return hex.length === 1 ? '0' + hex : hex;
-            };
-            return '#' + toHex(r) + toHex(g) + toHex(b);
-        }
+<div class=WordSection1>
 
-        window.onload = function () {
-            let stopProp = function (ev) {
-                ev.stopPropagation();
-            }
+<p class=MsoTitle align=center style='margin-bottom:12.0pt;text-align:center'><b><span
+style='font-size:36.0pt;font-family:Helvetica;color:#2E74B5'>Eco</span></b><b><span
+style='font-size:36.0pt;font-family:Helvetica;color:#C00000'>Chef</span></b><b><span
+style='font-size:36.0pt;font-family:Helvetica'> Frequently Asked Questions</span></b></p>
 
-            var colorElement = document.getElementById("color");
-            colorElement.addEventListener("click", stopProp, false);
-            colorElement.addEventListener("mousedown", stopProp, false);
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>What does
+it do?</span></b></p>
 
-            var setFavicon = function (hex) {
-                var canvas = document.createElement('canvas');
-                canvas.width = 16;
-                canvas.height = 16;
-                var ctx = canvas.getContext('2d');
-                ctx.fillStyle = hex;
-                ctx.fillRect(0, 0, 16, 16);
-                document.getElementsByTagName('link')[0].href = canvas.toDataURL("image/x-icon");
-            }
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>Calculates time for an oven or
+grill to heat (or cool) to a given temperature, allowing user to start a timer
+and estimate progress of temperature to the desired set point. You can go away
+and the app will send you a notification when it thinks your oven or grill is
+ready.</span></p>
 
-            var setRandomColor = function setRandomColor() {
-                var h = void 0,
-                    s = void 0,
-                    l = void 0;
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>Provides an array of timers to
+keep track of food cooking or grilling, including separate timers for each
+side.</span></p>
 
-                h = randomInt(0, 359);
-                s = randomInt(55, 75);
-                l = randomInt(40, 60);
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>How does
+the oven/grill preheat prediction work?</span></b></p>
 
-                document.documentElement.style.setProperty('--color', 'hsl(' + h + ', ' + s + '%, ' + l + '%)');
-                var hex = hslToHex(h, s, l);
-                document.title = hex;
-                colorElement.innerHTML = hex;
-                document.documentElement.style.setProperty('--color-transparent', hex + '22');
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>We use a first-order linear
+thermodynamic model to quickly estimate the time required to go from one
+temperature to another. Glad you asked?</span></p>
 
-                setFavicon(hex);
-            };
-            setRandomColor();
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>Whatever.
+That sounds stupid.</span></b></p>
 
-            var body = document.getElementsByTagName("body")[0];
-            body.addEventListener("mousedown", function (ev) {
-                ev.preventDefault();
-            });
-            body.addEventListener("click", function () {
-                setRandomColor();
-            }, false);
-        };
-    </script>
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>It is, but it works well enough
+and it’s about the right amount of fidelity given how hard it is to account for
+all the unknowns. </span></p>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>Where do
+the models come from?</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>We took time versus temperature measurements
+of several real ovens and grills, fitting our model parameters to the data observed.</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>How
+accurate is it?</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>Within less than a minute on the
+systems we test. However, all ovens differ, ambient conditions matters, and so
+your mileage may vary, perhaps greatly. However, the system will adapt and
+learn your oven over time if you give it feedback by telling it when the oven
+actually finishes preheating.</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>How do I “train”
+the app to learn my oven or grill?</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>If the oven completes preheating
+before the time goes off, hit the “done” button in the app and the app will
+record the data and adapt its model. If the oven isn’t yet done preheating when
+the timer goes off, swipe up on the notification and select “</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>Why did
+you build this?</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>It’s wasteful to leave an oven
+on longer than is necessary. It wastes energy to keep the oven hot, and often
+wastes energy as the house needs more air conditioning in the warm months to
+offset the heat from the oven. It’s also nice to be able to have an estimate of
+when a grill or oven will be preheated instead of just watching the blinking
+light.</span></p>
+
+<p class=MsoListParagraph style='margin-bottom:6.0pt;text-indent:-.25in'><span
+style='font-size:22.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span><b><span style='font-size:22.0pt;font-family:Helvetica'>Are you
+collecting any personal data?</span></b></p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+6.0pt;margin-left:1.0in;text-indent:-.25in'><span style='font-size:22.0pt;
+font-family:"Courier New"'>o<span style='font:7.0pt "Times New Roman"'>&nbsp; </span></span><span
+style='font-size:22.0pt;font-family:Helvetica'>No. The documentation (i.e. this
+screen) is web-based, so we see the IP address from which you are connecting
+(as does every other website, by necessity) but with no other identifying information
+included.</span></p>
+
+</div>
+
 </body>
 
 </html>
